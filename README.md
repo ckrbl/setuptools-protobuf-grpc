@@ -1,4 +1,4 @@
-# protobuf support for setuptools
+# setuptools with protobuf and grpc compilation
 
 Plugin for `setuptools` that adds support for compiling protobuf files.
 
@@ -21,7 +21,7 @@ install commands.
 
 ## Usage
 
-You can configure `setuptools-protobuf` in either `setup.py`, `setup.cfg` or `pyproject.toml`.
+You can configure `setuptools-protobuf-grpc` in either `setup.py`, `setup.cfg` or `pyproject.toml`.
 
 ### setup.py
 
@@ -30,7 +30,7 @@ from setuptools_protobuf import Protobuf
 
 setup(
 ...
-    setup_requires=['setuptools-protobuf'],
+    setup_requires=['setuptools-protobuf-grpc'],
     protobufs=[Protobuf('example/foo.proto')],
 )
 ```
@@ -43,19 +43,19 @@ setup(
 [options]
 setup_requires =
     setuptools
-    setuptools-protobuf
+    setuptools-protobuf-grpc
 ```
 
 ### pyproject.toml
 
 ```toml
 [build-system]
-requires = ["setuptools", "setuptools-protobuf"]
+requires = ["setuptools", "setuptools-protobuf-grpc"]
 
-[tool.setuptools-protobuf]
+[tool.setuptools-protobuf-grpc]
 protobufs = ["example/foo.proto"]
 
-# Require the generation of typing hints:
+# Generate typing hints:
 mypy = true
 
 # Optionally, set the specific protoc version to use:
