@@ -1,4 +1,4 @@
-# setuptools with protobuf and grpc compilation
+# Setuptools with Protobuf and GRPC compilation
 
 Plugin for `setuptools` that adds support for compiling protobuf files.
 
