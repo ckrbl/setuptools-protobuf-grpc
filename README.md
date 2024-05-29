@@ -26,7 +26,7 @@ You can configure `setuptools-protobuf-grpc` in either `setup.py`, `setup.cfg` o
 ### setup.py
 
 ```python
-from setuptools_protobuf import Protobuf
+from setuptools_protobuf_grpc import Protobuf
 
 setup(
 ...
